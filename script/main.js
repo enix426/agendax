@@ -82,8 +82,6 @@ for(let i=0;i<5;i++){
     console.log(annee()+"-"+"0"+moisEnChiffre()+"-"+jour())
 }
 
-//mofication de la date si inférieur a 10
-//07-07-2020
 
 //evt va dans afficheEvenement et affiche le data
 
@@ -134,14 +132,43 @@ function ajoutDonnee(date,titre,description,stardt,enddt){
     $('document').ready(function(){
       $("#btnAjoutEvent").click(evt => {
         let titre = $("input[name=titre]").val();
+        let date = $("input[name=date]").val();
         let description = $("input[name=description]").val();
         let stardt = $("input[name=startdate]").val();
         let enddt = $("input[name=enddate]").val();
-console.log("je suis ici ", titre,description,stardt,enddt);
-        ajoutDonnee(1372020, titre,description,stardt,enddt)
+        
+        
+console.log("je suis ici ",date, titre,description,stardt,enddt);
+        ajoutDonnee(date,titre,description,stardt,enddt)
         
       });
   });
+
+  //dropdown avec select pour les heur
+
+  let heureDebut = document.getElementById("heureDebut");
+  let heureFin = document.getElementById("heureFin");
+
+for(let i =0; i<=23; i++){
+    let optionHeureDebut = document.createElement("option");
+    let optionHeureFin = document.createElement("option");
+
+    heureDebut.appendChild(optionHeureDebut).innerHTML = i+"H";
+    heureFin.appendChild(optionHeureFin).innerHTML = i+"H";
+  }
+  //dropdown avec select pour les minutes
+  let minuteDebut = document.getElementById("minuteDebut");
+  let minuteFin = document.getElementById("minuteFin");
+  for(let i =0; i<=23; i++){
+    let optionMinuteDebut = document.createElement("option");
+    let optionMinuteFin = document.createElement("option");
+
+    minuteDebut.appendChild(optionMinuteDebut).innerHTML = i+"Min";
+    minuteFin.appendChild(optionMinuteFin).innerHTML = i+"Min";
+  }
+
+  
+
 
 
   
