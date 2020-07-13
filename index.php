@@ -7,18 +7,19 @@
 <body>
 <div>
         <form id="eventForm">
-            <input type="text" name="eventname" value="RdV Montréal GP">
+            
             <br><input type="text" id="titre" type="input" name="titre" value="titre">
             <br><input type="text" id="date" type="input" name="date" value="date">
             <br><input type="text" id="description" type="input" name="description" value="description">
-            <br><input type="text" id="dateD" type="input" name="startdate" value="2020-07-12 10:00:00">
+            <br><input type="text" id="dateD" type="input" name="startdate" value="">
                 <select id="heureDebut"></select>
                 <select id="minuteDebut"></select>
-            <br><input type="text" id="dateF" type="input" name="enddate" value="2020-07-12 11:00:00">
+            <br><input type="text" id="dateF" type="input" name="enddate" value="">
                 <select id="heureFin"></select></select>
                 <select id="minuteFin"></select>
         </form>
         <button id="btnAjoutEvent">Ajouter Événement</button>
+        <button id="btnTestHeur">Ajouter Événement</button>
 </div>
 
 
