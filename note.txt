@@ -1,0 +1,7 @@
+quand on click sur un jour ya un popup
+qui a un formulaire avec la date et le id déjà integré
+quand on click sur enregistrer 
+
+ça ajoute levenement dans la base de donnée
+
+en totue fin ça affiche le titre dans le jour de l'événement

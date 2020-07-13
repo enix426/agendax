@@ -1,0 +1,11 @@
+table {
+    width:auto;
+
+}
+td, tr {
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    border: 2px solid black;
+
+}
