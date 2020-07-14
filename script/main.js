@@ -7,5 +7,6 @@ console.log("je suis dans le main");
 
 
 afficheGrille();
+appelAfficheEvenement();
 appelAfficheEvenement(afficheDansCase);
 ajoutEvenement();

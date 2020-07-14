@@ -1,4 +1,5 @@
-export function afficheGrille(dateSelectionner){
+
+export function afficheGrille(dateSelectionner,tabDate){
 console.log("je suis dans grille");
 
 let body = document.querySelector("body");
@@ -37,16 +38,16 @@ let getDaysInMonth = function(month,year) {
    };
    let moisNumber = getDaysInMonth(moisEnChiffre(),annee());
    
-   console.log(moisNumber);
+
    body.appendChild(h1).innerHTML = jour()+" "+mois()+" "+annee();
    
    let table = document.createElement("table");
    
+   
    body.appendChild(table);
    let jourDuMois =1;
    // creation grille de la date
-
-
+    tabDate = [];
     for(let i=0;i<5;i++){
         let eTr = document.createElement("tr");
     
@@ -71,15 +72,17 @@ let getDaysInMonth = function(month,year) {
             document.getElementById("dateF").setAttribute("value",dateSelectionner)
             
             //$('.dateD').textContent = dateSelectionner;
-    
+            tabDate += evt.target.id;
             console.log(evt.target.id);
+            console.log(tabDate);
             
             })
             jourDuMois++;
             }
         }
+    }
         //2020-06-20 10:00:00
         //2020-7-9
-        console.log(annee()+"-"+"0"+moisEnChiffre()+"-"+jour())
-    }
+        
+    console.log(annee()+"-"+"0"+moisEnChiffre()+"-"+jour());
 }
