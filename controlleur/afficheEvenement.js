@@ -15,10 +15,8 @@ export function appelAfficheEvenement(appelSucces){
   //let text = document.createTextNode;
 
     if(this.readyState == 4 && this.status ==200){
-      let data =JSON.parse(this.responseText);
-      console.log("je dans afficher evenement "+data[0].id);   
-      appelSucces(data);
-      
+      let dataQuiVaDansAfficheDansCase =JSON.parse(this.responseText); 
+      appelSucces(dataQuiVaDansAfficheDansCase);
     }
 
   }

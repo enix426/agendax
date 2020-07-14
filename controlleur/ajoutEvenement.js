@@ -1,7 +1,5 @@
-import {afficheGrille} from "../controlleur/afficheGrille";
-
 export function ajoutEvenement(){
-    let dateSelectionner;
+    
 //recuperation des champ input 
     // Ajout d'événement
     $('document').ready(function(){
@@ -15,12 +13,12 @@ export function ajoutEvenement(){
           let titre = $("input[name=titre]").val();
           let date = $("input[name=date]").val();
           let description = $("input[name=description]").val();
-          let stardt = dateSelectionner + " " + heureDebut+":"+minuteDebut;
-          let enddt = dateSelectionner + " " + heureFin+":"+minuteFin;
+          let stardt = date + " " + heureDebut+":"+minuteDebut;
+          let enddt = date + " " + heureFin+":"+minuteFin;
           
           
           console.log("je suis ici ",date, titre,description,stardt,enddt);
-          console.log("test pour stardt ",dateSelectionner + " " + heureDebut+":"+minuteDebut);
+          console.log("test pour stardt ",date + " " + heureDebut+":"+minuteDebut);
           
           ajoutDonnee(date,titre,description,stardt,enddt);
           
@@ -56,15 +54,7 @@ export function ajoutEvenement(){
       optionMinuteFin.setAttribute("value",i);
     }
 
-    // Definir la fonction "callBack"
-function callBack(evt){  
-    // log la reponse du serveur
-    
-    console.log(evt);
-  }
-  
-  // Donner la fonction "callBack" a "appelAfficheEvenement"
-  appelAfficheEvenement(callBack);
+
   
   function ajoutDonnee(date,titre,description,stardt,enddt){
     let ajax = new XMLHttpRequest();

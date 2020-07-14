@@ -46,6 +46,7 @@ let getDaysInMonth = function(month,year) {
    let jourDuMois =1;
    // creation grille de la date
 
+
     for(let i=0;i<5;i++){
         let eTr = document.createElement("tr");
     
@@ -58,7 +59,11 @@ let getDaysInMonth = function(month,year) {
             eTd.setAttribute("id",annee()+"-"+moisEnChiffre().toString().padStart(2,0)+"-"+jourDuMois.toString().padStart(2,0));
             eTd.addEventListener("click",function(evt){
     
+
             dateSelectionner = evt.target.id;
+            document.getElementById("date").innerHTML = dateSelectionner;
+            document.getElementById("date").setAttribute("value",dateSelectionner)
+
             document.getElementById("dateD").innerHTML = dateSelectionner;
             document.getElementById("dateD").setAttribute("value",dateSelectionner)
     

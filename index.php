@@ -9,7 +9,7 @@
         <form id="eventForm">
             
             <br><input type="text" id="titre" type="input" name="titre" value="titre">
-            <br><input type="text" id="date" type="input" name="date" value="date">
+            <br><input type="text" id="date" type="input" name="date">
             <br><input type="text" id="description" type="input" name="description" value="description">
             <br><input type="text" id="dateD" type="input" name="startdate" value="">
                 <select id="heureDebut"></select>
