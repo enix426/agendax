@@ -1,5 +1,4 @@
-
-export function afficheGrille(dateSelectionner,tabDate){
+export function afficheGrille(tabDate){
 console.log("je suis dans grille");
 
 let body = document.querySelector("body");
@@ -45,9 +44,10 @@ let getDaysInMonth = function(month,year) {
    
    
    body.appendChild(table);
+   let dateSelectionner;
    let jourDuMois =1;
    // creation grille de la date
-    tabDate = [];
+    
     for(let i=0;i<5;i++){
         let eTr = document.createElement("tr");
     
@@ -59,8 +59,7 @@ let getDaysInMonth = function(month,year) {
             eTr.appendChild(eTd).innerHTML = jourDuMois;
             eTd.setAttribute("id",annee()+"-"+moisEnChiffre().toString().padStart(2,0)+"-"+jourDuMois.toString().padStart(2,0));
             eTd.addEventListener("click",function(evt){
-    
-
+            
             dateSelectionner = evt.target.id;
             document.getElementById("date").innerHTML = dateSelectionner;
             document.getElementById("date").setAttribute("value",dateSelectionner)
@@ -70,19 +69,14 @@ let getDaysInMonth = function(month,year) {
     
             document.getElementById("dateF").innerHTML = dateSelectionner;
             document.getElementById("dateF").setAttribute("value",dateSelectionner)
+        })
+            tabDate.push(annee()+"-"+moisEnChiffre().toString().padStart(2,0)+"-"+jourDuMois.toString().padStart(2,0));
             
-            //$('.dateD').textContent = dateSelectionner;
-            tabDate += evt.target.id;
-            console.log(evt.target.id);
-            console.log(tabDate);
-            
-            })
             jourDuMois++;
+            
             }
+            
         }
+        //console.log("je suis exe de tabDate ",tabDate)
     }
-        //2020-06-20 10:00:00
-        //2020-7-9
-        
-    console.log(annee()+"-"+"0"+moisEnChiffre()+"-"+jour());
 }

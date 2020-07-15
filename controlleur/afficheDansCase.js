@@ -1,15 +1,20 @@
-export function afficheDansCase(dataQuiVienDeAfficheEvenement,tabDate){
+export function afficheDansCase(serveurDate,idCalendrier){
     
-    console.log("je suis dans afficheDansCase table",tabDate );
-    console.log("je suis dans afficheDansCase",dataQuiVienDeAfficheEvenement );
-    /* for(let i=0; i<dataQuiVienDeAfficheEvenement.length;i++){
+    let dataDuServeur = serveurDate;
+    console.log("les date",idCalendrier);
+    console.log("les date du Server",dataDuServeur);
 
-        if(dataQuiVienDeAfficheEvenement[i].date == ){
-        console.log("je suis ce jour ",dataQuiVienDeAfficheEvenement[i].date)
-        }    
-    } */
-    $(document).ready(function() {
-        //console.log($('"je suis dans afficheDansCase #2020-07-07'));
-    });
 
+ 
+
+/*      for(let i=0; i<serveurDate.length;i++){
+        let temporaireDate = serveurDate[i].date
+        
+
+        for(let j=0; j<idCalendrier.length;j++){
+            if(idCalendrier[i].date == temporaireDate){
+                console.log("je suis id ",serveurDate[i].id,"je suis date ",serveurDate[i].date,"je suis titre ",serveurDate[i].titre);
+            }
+        } 
+    }  */ 
 }

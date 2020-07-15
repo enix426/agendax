@@ -6,7 +6,21 @@ import {afficheDansCase} from "../controlleur/afficheDansCase";
 console.log("je suis dans le main");
 
 
-afficheGrille();
-appelAfficheEvenement();
-appelAfficheEvenement(afficheDansCase);
+
+let tabDate = [];
+afficheGrille(tabDate);
+
+//console.log(afficheGrille);
+
+afficheDansCase(afficheGrille,tabDate);
+appelAfficheEvenement(function(donneesQuiAEteDonnerAAppelSucces){
+        //ici entre les 2 ya quoi car ya un appelAfficheEvenement(appelSucces)
+        //et quand tu as finis de rouler affiche evenement roule afficheDansCase
+        // avec les 2 parametre 
+    afficheDansCase(donneesQuiAEteDonnerAAppelSucces,tabDate);
+});
+
+
 ajoutEvenement();
+
+
