@@ -15,7 +15,7 @@ export function appelAfficheEvenement(appelSucces){
   //let text = document.createTextNode;
 
     if(this.readyState == 4 && this.status ==200){
-      let dataQuiVaDansAfficheDansCase =JSON.parse(this.responseText);
+      let dataQuiVaDansAfficheDansCase = JSON.parse(this.responseText);
       console.log("je dans afficher evenement "+dataQuiVaDansAfficheDansCase[0].id);   
       //ici cest comme un return
       appelSucces(dataQuiVaDansAfficheDansCase);

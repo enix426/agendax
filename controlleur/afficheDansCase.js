@@ -1,20 +1,23 @@
-export function afficheDansCase(serveurDate,idCalendrier){
-    
-    let dataDuServeur = serveurDate;
-    console.log("les date",idCalendrier);
-    console.log("les date du Server",dataDuServeur);
+export function afficheDansCase(serveurDate, idCalendrier) {
+
+    serveurDate.forEach(dateDuServeur => {
 
 
- 
+        let index = idCalendrier.indexOf(dateDuServeur.date)
 
-/*      for(let i=0; i<serveurDate.length;i++){
-        let temporaireDate = serveurDate[i].date
-        
+        if (index != -1) {
+            console.log(dateDuServeur.id, " ", dateDuServeur.titre, " ", dateDuServeur.description, " ", dateDuServeur.date);
+            $(`#${dateDuServeur.date}`).css('background', 'green');
 
-        for(let j=0; j<idCalendrier.length;j++){
-            if(idCalendrier[i].date == temporaireDate){
-                console.log("je suis id ",serveurDate[i].id,"je suis date ",serveurDate[i].date,"je suis titre ",serveurDate[i].titre);
-            }
-        } 
-    }  */ 
+            let eUl = document.createElement("ul");
+            let eLi = document.createElement("li");
+            eLi.setAttribute("class", "liTitre");
+
+            let eText = document.createTextNode(dateDuServeur.titre);
+            document.getElementById(dateDuServeur.date).appendChild(eUl).appendChild(eLi).appendChild(eText);
+
+            //$(`#${dateDuServeur.date}`).append("<li class='liTitre'>"+dateDuServeur.titre+"</li>");
+        }
+    });
+
 }

@@ -1,0 +1,43 @@
+export function afficheDansCase(serveurDate,idCalendrier){
+    
+    let dataDuServeur = []['id']['date']['titre']['descrition']['starTd']['endTd'];
+
+ 
+    /* console.log("les date",idCalendrier);
+    console.log("ligne 5", dataDuServeur);
+    console.log("ligne 6", dataDuServeur[0]); */
+    
+    //boucle objet pour avoir parametre date.
+    for (const cle in serveurDate) {
+        dataDuServeur.push(serveurDate[cle]['id'])
+        dataDuServeur.push(serveurDate[cle]['date'])
+        dataDuServeur.push(serveurDate[cle]['titre'])
+        dataDuServeur.push(serveurDate[cle]['descrition'])
+        dataDuServeur.push(serveurDate[cle]['starTd'])
+        dataDuServeur.push(serveurDate[cle]['endTd'])
+        console.log(serveurDate[cle]['date'])
+    }
+
+    console.log("new", dataDuServeur)
+
+    //let dataDuServeurs = []
+
+    //dataDuServeurs.push(dataDuServeur);
+   
+    //console.log("datas", dataDuServeurs);
+    
+
+
+ 
+
+/*      for(let i=0; i<serveurDate.length;i++){
+        let temporaireDate = serveurDate[i].date
+        
+
+        for(let j=0; j<idCalendrier.length;j++){
+            if(idCalendrier[i].date == temporaireDate){
+                console.log("je suis id ",serveurDate[i].id,"je suis date ",serveurDate[i].date,"je suis titre ",serveurDate[i].titre);
+            }
+        } 
+    }  */ 
+}
