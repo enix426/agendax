@@ -32,7 +32,7 @@ export function ajoutEvenement(){
   
   for(let i =0; i<=23; i++){
       let optionHeureDebut = document.createElement("option");
-      let optionHeureFin = document.createElement("option");
+      let optionHeureFin = document.createElement("option"); 
   
       heureDebut.appendChild(optionHeureDebut).innerHTML = i+"H";
       optionHeureDebut.setAttribute("value",i);

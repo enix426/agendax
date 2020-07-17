@@ -10,6 +10,13 @@ td,tr {
 
 }
 
+ul {
+    height: 100px;
+    overflow: auto;
+    list-style-type: none;
+
+}
+
 .liTitre {
     list-style-type: none;
   }

@@ -1,23 +1,39 @@
 export function afficheDansCase(serveurDate, idCalendrier) {
 
+    //eTrDate = document.getElementById(dateDuServeur.date);
+    //console.log(eTrDate);
+
+
     serveurDate.forEach(dateDuServeur => {
 
 
         let index = idCalendrier.indexOf(dateDuServeur.date)
 
+
+
         if (index != -1) {
-            console.log(dateDuServeur.id, " ", dateDuServeur.titre, " ", dateDuServeur.description, " ", dateDuServeur.date);
-            $(`#${dateDuServeur.date}`).css('background', 'green');
 
-            let eUl = document.createElement("ul");
-            let eLi = document.createElement("li");
-            eLi.setAttribute("class", "liTitre");
+            let space = $(`#date-${dateDuServeur.date}`);
+            space.css('background', 'green')
 
+            //trouver le ul
+            // let listEvenement = $("#date-" + dateDuServeur.date + " ul");
+            let listEvenement = document.querySelector("#date-" + dateDuServeur.date + " ul");
             let eText = document.createTextNode(dateDuServeur.titre);
-            document.getElementById(dateDuServeur.date).appendChild(eUl).appendChild(eLi).appendChild(eText);
+            let eLi = document.createElement("li");
+            if (listEvenement == null) {
+                let eUl = document.createElement("ul");
+                eUl.appendChild(eLi).appendChild(eText);
+                space.append(eUl);
 
-            //$(`#${dateDuServeur.date}`).append("<li class='liTitre'>"+dateDuServeur.titre+"</li>");
+            } else {
+                listEvenement.appendChild(eLi).appendChild(eText);
+
+            }
         }
+
+
     });
+
 
 }

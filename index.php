@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
     <link rel="stylesheet" href="assets/css/sticky-dark-top-nav.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
 </head>
 <body>
 <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
@@ -28,7 +29,7 @@
         </div>
         </div>
     </nav>
-<section id="agenda" ">
+<section id="agenda">
         <form id="eventForm">
             
             <br><input type="text" id="titre" type="input" name="titre" value="titre">
@@ -46,9 +47,23 @@
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<div class="col-lg-4 cp;-lg-offset-4"></div>
+<div> 
+
     <script type="module" src="script/main.js"></script>
 
+    <table id="myTable" class="display"> 
+      <thead>
+            <tr>
+               <th>ID</th>
+               <th>Titre</th>
+               <th>Description</th>
+               <th>Stardt</th>
+               <th>Enddt</th>
+               <th>Categorie</th>
+            </tr>
+      </thead>
+    </table>
 
+</div>
 </body>
 </html>
