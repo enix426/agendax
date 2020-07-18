@@ -62,11 +62,6 @@
                <th>Categorie</th>
             </tr>
         <tbody>
-            <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            </tr>
         </tbody>
       </thead>
     </table>

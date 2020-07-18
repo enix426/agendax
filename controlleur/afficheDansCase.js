@@ -26,22 +26,17 @@ export function afficheDansCase(serveurDate, idCalendrier) {
                 listEvenement.appendChild(eLi).appendChild(eText);
 
             }
-
+            
+            // trouve le tbody
             let tableEvenement = document.querySelector("#tableEvenement" + " tbody");
-         
-            
-            // voir le nombre de cellule par ligne
-            
-            
-            //for(let i=0;i<serveurDate.length;i++)
-           
+             // affiche les valeurs de chaque case qu'il y a dans la base de donner
                 let eTrEvenement = document.createElement("tr")
                 tableEvenement.appendChild(eTrEvenement);
-                
+       // cible la ligne exate et la cellule exate pour ensuite ajouter la valeur de la cellule dans le eTdEvenement
                 for(let i=0; i<Object.keys(serveurDate[evt]).length;i++){
                     
                     let eTdEvenement = document.createElement("td");
-                    eTrEvenement.appendChild(eTdEvenement).innerHTML = i;
+                    eTrEvenement.appendChild(eTdEvenement).innerHTML = Object.values(serveurDate[evt])[i];
                     
                  } 
 
@@ -50,7 +45,7 @@ export function afficheDansCase(serveurDate, idCalendrier) {
             
             
 
-            console.log(Object.keys(serveurDate[evt])[0].value);
+            console.log(Object.values(serveurDate[evt])[0]);
         }
         
     });
