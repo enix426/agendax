@@ -55,11 +55,11 @@
       <thead>
             <tr>
                <th>ID</th>
+               <th>date</th>
                <th>Titre</th>
                <th>Description</th>
                <th>Stardt</th>
                <th>Enddt</th>
-               <th>Categorie</th>
             </tr>
         <tbody>
         </tbody>

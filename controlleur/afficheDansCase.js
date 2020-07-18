@@ -13,7 +13,6 @@ export function afficheDansCase(serveurDate, idCalendrier) {
             space.css('background', 'green')
 
             //trouver le ul
-            // 
             let listEvenement = document.querySelector("#date-" + dateDuServeur.date + " ul");
             let eText = document.createTextNode(dateDuServeur.titre);
             let eLi = document.createElement("li");
@@ -27,7 +26,7 @@ export function afficheDansCase(serveurDate, idCalendrier) {
 
             }
             
-            // trouve le tbody
+            // trouve le tbody pour afficher les evenement
             let tableEvenement = document.querySelector("#tableEvenement" + " tbody");
              // affiche les valeurs de chaque case qu'il y a dans la base de donner
                 let eTrEvenement = document.createElement("tr")
