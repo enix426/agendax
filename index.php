@@ -51,7 +51,7 @@
 
     <script type="module" src="script/main.js"></script>
 
-    <table id="myTable" class="display"> 
+    <table id="tableEvenement" class="display"> 
       <thead>
             <tr>
                <th>ID</th>
@@ -61,6 +61,13 @@
                <th>Enddt</th>
                <th>Categorie</th>
             </tr>
+        <tbody>
+            <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            </tr>
+        </tbody>
       </thead>
     </table>
 
