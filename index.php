@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="assets/css/sticky-dark-top-nav.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+    <script src="https://kit.fontawesome.com/c9135ee11c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
 <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
         <div class="container">
             <div><a class="navbar-brand" href="#"><span><img src="assets/img/logo.png">Agendax</span> </a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
@@ -31,7 +33,7 @@
     </nav>
 <section id="agenda">
         <form id="eventForm">
-            
+
             <br><input type="text" id="titre" type="input" name="titre" value="titre">
             <br><input type="text" id="date" type="input" name="date">
             <br><input type="text" id="description" type="input" name="description" value="description">
@@ -47,9 +49,9 @@
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<div> 
+<div id="separation"> 
 
-    <script type="module" src="script/main.js"></script>
+    
 
     <table id="tableEvenement" class="display"> 
       <thead>
@@ -61,11 +63,33 @@
                <th>Stardt</th>
                <th>Enddt</th>
             </tr>
+        </thead>  
         <tbody>
         </tbody>
-      </thead>
+      
     </table>
 
+
+
+    
+    
+
+<script type="module" src="script/main.js"></script>
 </div>
+
+<div id="modifierEvenement">
+        <form id="formModifierEvenement">
+                <br><input type="text" id="titre" type="input" name="titre" value="titre">
+                <br><input type="text" id="date" type="input" name="date">
+                <br><input type="text" id="description" type="input" name="description" value="description">
+                <br><input type="text" id="dateD" type="input" name="startdate" value="">
+                    <select id="heureDebut"></select>
+                    <select id="minuteDebut"></select>
+                <br><input type="text" id="dateF" type="input" name="enddate" value="">
+                    <select id="heureFin"></select></select>
+                    <select id="minuteFin"></select>
+                    <button id="btnModifierEvenement">Modifier Événement</button>
+            </form>
+    </div>
 </body>
 </html>

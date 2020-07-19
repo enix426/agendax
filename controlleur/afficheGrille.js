@@ -35,12 +35,12 @@ export function afficheGrille(tabDate) {
     let moisNumber = getDaysInMonth(moisEnChiffre(), annee());
 
 
-    body.appendChild(h1).innerHTML = jour() + " " + mois() + " " + annee();
+    document.getElementById("separation").appendChild(h1).innerHTML = jour() + " " + mois() + " " + annee();
 
     let table = document.createElement("table");
 
 
-    body.appendChild(table);
+    document.getElementById("separation").appendChild(table);
     let dateSelectionner;
     let jourDuMois = 1;
     // creation grille de la date
