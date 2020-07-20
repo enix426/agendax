@@ -1,3 +1,25 @@
+.fa {
+  font-size: 3em;
+}
+
+#prev {
+  margin-right: 25px;
+  padding: 0 20px 0 20px;
+  cursor: pointer;
+}
+
+#next {
+  margin-left: 25px;
+  padding: 0 20px 0 20px;
+  cursor: pointer;
+
+}
+
+
+#changeHeure {
+  background-color: white;
+}
+
 h1 {
   display: flex;
   justify-content: center;
@@ -55,6 +77,10 @@ ul {
 
 
 /**************-SIDE-BAR-SECTION-MODIFICATION-AJOUTER*****************/
+
+p {
+  cursor: pointer;
+}
 
 h3 {
   /* margin-left: 250px; */
@@ -131,15 +157,6 @@ h3 {
 
 }
 
-/*  
-  .sidebar1
-   {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  } */
 
 .openbtn,
 .openbtn1 {

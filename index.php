@@ -8,29 +8,32 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
     <script src="https://kit.fontawesome.com/c9135ee11c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
 </head>
 <body>
-
-
 <!-- SECTION AFFICHE AGENDA + AJOUTER EVENEMENTS -->
 
 <div id="main">
 
 
+<!-- <button id="changeHeure" class="fas fa-clock" type="button" ></button> -->
 
   <h1>Agendax</h1>
-
+  
   <div id="menu">
     <div><button class="openbtn" onclick="openNav()">☰ Modifier Evenement</button></div>  
     <div><button class="openbtn1" onclick="openNav1()">☰ Ajouter  Evenement.</button></div> 
   </div> 
 
-
 <div id="aligner"> 
-  <button id="prev"><</button> 
+  <i id="prev" class="fa fa-chevron-left" aria-hidden="true"></i>
+  <!-- AFFICHAGE CALENDRIER -->
   <div id="affichageDate"></div> 
-  <button id="next">></button>
+  <i id="next" class="fa fa-chevron-right" aria-hidden="true"></i>
 </div>
+
+
   
   
   
@@ -108,7 +111,6 @@
 
 
 
-
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script>
 function openNav1() {
@@ -130,9 +132,6 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
-
-
-
 </script>
 </body>
 </html>

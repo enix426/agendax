@@ -2,7 +2,8 @@ export function afficheGrille(tabDate) {
     console.log("je suis dans grille");
 
 
-    /************TEST DE SAM *********************/
+    /************TEST DE SAM *******parfait pour jour de semaine**************/
+
     // if (!Date.now) {
     //     Date.now = function () {
     //         return new Date().getTime();
@@ -32,9 +33,6 @@ export function afficheGrille(tabDate) {
     //     var theCDate = new Date(getDate);
     //     return days[theCDate.getDay()] + ', ' + theCDate.getDate() + '-' + months[theCDate.getMonth()] + '-' + theCDate.getFullYear();
     // }
-
-
-
     /************ FIN TEST DE SAM *********************/
 
 
@@ -47,12 +45,25 @@ export function afficheGrille(tabDate) {
     /*BOUTON MODIFIER AFFICHE RIEN PARCE QUE ICI ON EST A +2 SUR LE MOIS !*/
 
 
+    document.getElementById('next').addEventListener("click", function () {
+        compteur += 1;
+        // console.log("comteur next", compteur);
+    });
 
 
+    document.getElementById('prev').addEventListener("click", function () {
+        compteur -= 1;
+        // console.log("comteur prev", compteur);
+    });
 
 
     let body = document.querySelector("body");
     let h1 = document.createElement("h1");
+    let compteur = 0;
+
+
+
+
 
     function jour() {
         let jour = new Date();
@@ -62,11 +73,13 @@ export function afficheGrille(tabDate) {
 
 
 
+
+
     function mois() {
         let j = new Date();
         let mois = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        console.log("f mois", mois[j.getMonth()])
+        console.log("voici la function mois", mois[j.getMonth()])
         return mois[j.getMonth()];
 
 
@@ -74,10 +87,11 @@ export function afficheGrille(tabDate) {
 
     function moisEnChiffre() {
         let d = new Date();
-        let n = d.getMonth();
-        console.log("ccccc", n)
+        let n = d.getMonth() + compteur;
+        console.log("valeur de N ", n)
         return n + 1;
     }
+
 
     function annee() {
         let annee = new Date();
