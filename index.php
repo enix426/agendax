@@ -22,7 +22,7 @@
   <h1>Agendax</h1>
   
   <div id="menu">
-    <div><button class="openbtn" onclick="openNav()">☰ Modifier Evenement</button></div>  
+    <div><button class="openbtn" onclick="openNav()">☰ Afficher Evenement</button></div>  
     <div><button class="openbtn1" onclick="openNav1()">☰ Ajouter  Evenement.</button></div> 
   </div> 
 
