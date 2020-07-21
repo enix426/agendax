@@ -1,197 +1,281 @@
-.fa {
-  font-size: 3em;
+/* bouton setting par default*/
+
+button {
+    border-radius: 30px;
+    margin: .20rem;
+    font-size: 1rem;
+    background: #ffffff;
+    border: 1px solid #666666;
 }
 
+button:hover {
+    background: #666666;
+    color: #ffffff;
+}
+
+
+/*icone*/
+
+.fa {
+    font-size: 3em;
+}
+
+
+/* bouton next et prev */
+
 #prev {
-  margin-right: 25px;
-  padding: 0 20px 0 20px;
-  cursor: pointer;
+    margin-right: 25px;
+    padding: 0 20px 0 20px;
+    cursor: pointer;
 }
 
 #next {
-  margin-left: 25px;
-  padding: 0 20px 0 20px;
-  cursor: pointer;
-
+    margin-left: 25px;
+    padding: 0 20px 0 20px;
+    cursor: pointer;
 }
 
-
 #changeHeure {
-  background-color: white;
+    background-color: white;
 }
 
 h1 {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 table {
-  width: auto;
-
+    width: auto;
 }
 
-td,
-tr {
-  height: 100px;
-  width: 100px;
-
-  border: 2px solid black;
-
+#separation table td,
+#separation table tr {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
 }
 
 ul {
-  height: 50px;
-  overflow: auto;
-  list-style-type: none;
-
+    height: 50px;
+    overflow: auto;
+    list-style-type: none;
 }
 
 .liTitre {
-  list-style-type: none;
+    list-style-type: none;
 }
-
 
 #aligner,
 #affichageDate {
-  line-height: 0px;
-
-  display: inline-block;
-  display: flex;
-  justify-content: center;
+    line-height: 0px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
-
 
 #separation {
-  display: flex;
-  justify-content: center;
-  /* border:3px black solid;  */
-  border-radius: 0 50px 0 0;
-  margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    /* border:3px black solid;  */
+    border-radius: 0 50px 0 0;
+    margin-left: 50px;
 }
 
-
 #menu div:nth-child(2) {
-  padding-top: 15px;
-
+    padding-top: 15px;
 }
 
 
 /**************-SIDE-BAR-SECTION-MODIFICATION-AJOUTER*****************/
 
 p {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 h3 {
-  /* margin-left: 250px; */
-  justify-content: center;
-  display: flex;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
 }
 
 #modifierEvenement {
-
-  height: 250px;
+    height: 250px;
 }
 
 #modificationEvent td {
-  border: 0px solid black;
-  height: 0px;
-  ;
-  width: 100px;
+    border: 0px solid black;
+    height: 0px;
+    padding: 15px;
 }
 
-#mySidebar1 {
-  border-right: 3px black solid;
+#mySidebar1,
+#mySidebar {
+    border-right: 3px black solid;
 }
+
+
+/* icone dans section modifier */
 
 .far {
-  color: rgb(15, 15, 15);
-  text-shadow: 1px 1px 1px rgb(97, 97, 97);
-  font-size: 2.5em;
-  padding: 10px;
+    color: rgb(15, 15, 15);
+    text-shadow: 1px 1px 1px rgb(97, 97, 97);
+    font-size: 2.5em;
+    padding: 10px;
 }
 
 .fas {
-  color: rgb(1, 196, 255);
-  text-shadow: 1px 1px 1px rgb(172, 84, 84);
-  font-size: 2.5em;
-  padding: 10px;
+    color: rgb(1, 196, 255);
+    text-shadow: 1px 1px 1px rgb(172, 84, 84);
+    font-size: 2.5em;
+    padding: 10px;
 }
 
+
+/* side bar option par defaul*/
+
 .sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: white;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+    color: #f1f1f1;
 }
 
 .sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 .closebtn1 {
-  float: right;
-
+    float: right;
 }
-
 
 .openbtn,
 .openbtn1 {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
 }
 
 .openbtn:hover {
-  background-color: #444;
+    background-color: #444;
 }
 
 #main {
-  transition: margin-left .5s;
-  padding: 16px;
+    transition: margin-left .5s;
+    padding: 16px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+/* section ajouter */
+
+#eventForm,
+#btnAjoutEvent {
+    margin-left: 90px;
+}
+
+#btnAjoutEvent,
+#btnModifierEvenement {
+    margin-top: 25px;
+}
+
+#modificationEvent {
+    margin-left: 25px;
+}
+
+
+/* sur petite ecrans, hauteur plus petit que 450px*/
+
 @media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+    .sidebar1 a {
+        font-size: 18px;
+    }
+    .sidebar1 {
+        padding-top: 15px;
+    }
+}
 
-  .sidebar a {
-    font-size: 18px;
-  }
 
-  .sidebar1 a {
-    font-size: 18px;
-  }
+/* The Modal (background) */
 
-  .sidebar1 {
-    padding-top: 15px;
-  }
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 25%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 4%;
+    width: 60%;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
