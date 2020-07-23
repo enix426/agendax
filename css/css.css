@@ -81,8 +81,9 @@ ul {
     margin-left: 50px;
 }
 
-#menu div:nth-child(2) {
-    padding-top: 15px;
+#menu {
+    display: flex;
+    padding: 15px 0;
 }
 
 
@@ -172,7 +173,9 @@ h3 {
 }
 
 .openbtn,
-.openbtn1 {
+.openbtn1,
+.openbtn2,
+.openbtn3 {
     font-size: 20px;
     cursor: pointer;
     background-color: #111;

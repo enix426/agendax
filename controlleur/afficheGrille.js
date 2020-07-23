@@ -82,10 +82,11 @@ export function afficheGrille(tabDate, serveurDate, jour, moisEnChiffre, annee) 
     /*
      * Changer de mois quand on clique les fleches
      */
-    let btnSuivant = document.getElementById("next");
-    let btnPrecedent = document.getElementById("prev");
+    let btnSuivant = $('#next')
+    let btnPrecedent = $('#prev')
 
-    btnSuivant.addEventListener("click",function(){
+    btnSuivant.off()
+    btnSuivant.on("click", function(){
         compteurMois += 1
         
         if (compteurMois > 11){
@@ -93,10 +94,12 @@ export function afficheGrille(tabDate, serveurDate, jour, moisEnChiffre, annee) 
             compteurAnnee += 1;
         }
         
+        localStorage.setItem('compteurMois', compteurMois)
         creerGrille();
     });
 
-    btnPrecedent.addEventListener("click",function(){
+    btnPrecedent.off()
+    btnPrecedent.on("click", function(){
         compteurMois -= 1;
         
         if (compteurMois < 0){
@@ -104,6 +107,7 @@ export function afficheGrille(tabDate, serveurDate, jour, moisEnChiffre, annee) 
             compteurAnnee -= 1;
         }
         
+        localStorage.setItem('compteurMois', compteurMois)
         creerGrille();
     });
 }

@@ -28,6 +28,8 @@
     <div id="menu">
       <div><button class="openbtn" onclick="openNav()">☰ Modifier Evenement</button></div>
       <div><button class="openbtn1" onclick="openNav1()">☰ Ajouter Evenement.</button></div>
+      <div><button id="afficher-mois" class="openbtn2">☰ Afficher mois.</button></div>
+      <div><button id="afficher-semaine" class="openbtn3">☰ Afficher semaine.</button></div>
     </div>
 
     <div id="aligner">
@@ -37,14 +39,9 @@
       <i id="next" class="fa fa-chevron-right" aria-hidden="true"></i>
     </div>
 
+    <div id="separation"></div>
 
-
-
-
-    <div id="separation"> </div>
-
-
-    <script id="test" type="module" src="script/main.js"></script>
+    <script type="module" src="script/main.js"></script>
 
     <!-- LA SIDE BOARD AVEC FORUMULAIRE -->
     <div id="mySidebar1" class="sidebar">
