@@ -99,10 +99,6 @@ h3 {
     margin-bottom: 40px;
 }
 
-#modifierEvenement {
-    height: 250px;
-}
-
 #modificationEvent td {
     border: 0px solid black;
     height: 0px;
@@ -242,7 +238,7 @@ h3 {
     /* Location of the box */
     left: 0;
     top: 0;
-    width: 25%;
+    width: 850px;
     /* Full width */
     height: 100%;
     /* Full height */

@@ -71,6 +71,7 @@ export function afficheDansCase(serveurDate, idCalendrier) {
                         document.getElementById("myModal").style.visibility = "visible";
 
                         // Ouvrir un modal pour modifier l'evement
+                        modal.style.display = "block";
                     })
                 }
             }

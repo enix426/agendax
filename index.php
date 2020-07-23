@@ -72,6 +72,35 @@
 
   <!-- SECTION SIDE BAR MODIFICATION + MODIFICATION -->
   <div id="mySidebar" class="sidebar">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+
+        <form id="formModifierEvenement">
+          <h5>Titre</h5>
+          <input type="text" id="titre" type="input" name="titre" value="titre">
+          <h5>Date</h5>
+          <input type="text" id="date" type="input" name="date">
+          <h5>Description</h5>
+          <input type="text" id="description" type="input" name="description" value="description">
+          <h5>Date Début</h5>
+          <input type="text" sid="dateD" type="input" name="startdate" value="">
+          <select id="heureDebut"></select>
+          <select id="minuteDebut"></select>
+          <h5>Date Fin</h5>
+          <input type="text" id="dateF" type="input" name="enddate" value="">
+          <select id="heureFin"></select></select>
+          <select id="minuteFin"></select>
+        </form>
+
+        <button id="btnModifierEvenement">Modifier Événement</button>
+
+      </div>
+    </div>
+
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
     <h3>Modification des evenements</h3>
     <section>
@@ -90,41 +119,6 @@
         <tbody id=modificationEvent>
         </tbody>
       </table>
-      <!-- /* MEMO BOUTON MODIFIER AFFICHE RIEN PARCE QUE ICI ON EST A +2 SUR LE MOIS DONC SEPTEMBRE! !*/ -->
-      <div id="modifierEvenement">
-
-
-
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span id="close-modal" class="close">&times;</span>
-
-            <form id="formModifierEvenement">
-              <h5>Titre</h5>
-              <input type="text" id="titre" type="input" name="titre" value="titre">
-              <h5>Date</h5>
-              <input type="text" id="date" type="input" name="date">
-              <h5>Description</h5>
-              <input type="text" id="description" type="input" name="description" value="description">
-              <h5>Date Début</h5>
-              <input type="text" sid="dateD" type="input" name="startdate" value="">
-              <select id="heureDebut"></select>
-              <select id="minuteDebut"></select>
-              <h5>Date Fin</h5>
-              <input type="text" id="dateF" type="input" name="enddate" value="">
-              <select id="heureFin"></select></select>
-              <select id="minuteFin"></select>
-            </form>
-
-            <button id="btnModifierEvenement">Modifier Événement</button>
-
-          </div>
-        </div>
-
-      </div>
     </section>
   </div>
 
@@ -166,10 +160,7 @@
     // recupere le span pour close
     var span = document.getElementsByClassName("close")[0];
 
-    // quand user click rouvre modal
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
+    // quand user click ferme modal
     document.getElementById('close-modal').onclick = function() {
       modal.style.display = "none";
     }
