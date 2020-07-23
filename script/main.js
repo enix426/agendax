@@ -45,9 +45,14 @@ btnMois.addEventListener('click', () => {
     localStorage.setItem("btnMois",1);
     localStorage.setItem("btnSemaine",0);
 
+
     document.getElementById('separation').innerHTML = ""
     document.getElementById('affichageDate').innerHTML = ""
+    document.getElementById("modificationEvent").innerHTML = "";
     afficheGrille(tabDate, serveurDate, jour(),+localStorage.getItem('compteurMois'),annee());
+
+   
+    
 })
 
 btnSemaine.addEventListener('click', () => {
@@ -56,5 +61,6 @@ btnSemaine.addEventListener('click', () => {
     
     document.getElementById('separation').innerHTML = ""
     document.getElementById('affichageDate').innerHTML = ""
+    document.getElementById("modificationEvent").innerHTML = "";
     afficheGrilleSemaine(tabDate, serveurDate,+localStorage.getItem('compteurMois'),annee());
 })

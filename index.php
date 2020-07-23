@@ -100,7 +100,7 @@
 
           <!-- Modal content -->
           <div class="modal-content">
-            <span class="close">&times;</span>
+            <span id="close-modal" class="close">&times;</span>
 
             <form id="formModifierEvenement">
               <h5>Titre</h5>
@@ -123,10 +123,6 @@
 
           </div>
         </div>
-
-        <!-- TEST DU BOUTON  -->
-        <button id="myBtn">Editer</button>
-        <button id="myBtn1">jambon</button>
 
       </div>
     </section>
@@ -165,7 +161,6 @@
     var modal = document.getElementById("myModal");
 
     // recuperer bouton id
-    var btn = document.getElementById("myBtn");
     var btn1 = document.getElementById("myBtn1");
 
     // recupere le span pour close
@@ -174,6 +169,9 @@
     // quand user click rouvre modal
     btn.onclick = function() {
       modal.style.display = "block";
+    }
+    document.getElementById('close-modal').onclick = function() {
+      modal.style.display = "none";
     }
 
     // quand user click rouvre modal

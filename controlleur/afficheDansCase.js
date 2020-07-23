@@ -5,26 +5,26 @@ export function afficheDansCase(serveurDate, idCalendrier) {
     //console.log(eTrDate);
 
 
-    serveurDate.forEach((dateDuServeur, evt) => {
+    serveurDate.forEach((dateDuServeur, index) => {
 
-        let index = idCalendrier.indexOf(dateDuServeur.date)
-        if (index != -1) {
+        let indexDansCalendrier = idCalendrier.indexOf(dateDuServeur.date)
+        if (indexDansCalendrier != -1) {
 
-            let space = $(`#date-${dateDuServeur.date}`);
-            space.css('background', 'green')
+            let journee = $(`#date-${dateDuServeur.date}`);
+            journee.css('background', 'green') // TODO: categorie
 
-            //trouver le ul
+            /*
+             * Mettre les evenements dans calendrier 
+             */
             let listEvenement = document.querySelector("#date-" + dateDuServeur.date + " ul");
             let eText = document.createTextNode(dateDuServeur.titre);
             let eLi = document.createElement("li");
             if (listEvenement == null) {
                 let eUl = document.createElement("ul");
                 eUl.appendChild(eLi).appendChild(eText);
-                space.append(eUl);
-
+                journee.append(eUl);
             } else {
                 listEvenement.appendChild(eLi).appendChild(eText);
-
             }
 
             // trouve le tbody pour afficher les evenement
@@ -32,45 +32,49 @@ export function afficheDansCase(serveurDate, idCalendrier) {
             // affiche les valeurs de chaque case qu'il y a dans la base de donner
             let eTrEvenement = document.createElement("tr")
             tableEvenement.appendChild(eTrEvenement);
-            // cible la ligne exate et la cellule exate pour ensuite ajouter la valeur de la cellule dans le eTdEvenement
-            for (let i = 0; i < Object.keys(serveurDate[evt]).length + 2; i++) {
+
+            // cible la ligne exacte et la cellule exacte pour ensuite ajouter la valeur de la cellule dans le eTdEvenement
+            for (let i = 0; i < Object.keys(dateDuServeur).length + 2; i++) {
 
 
                 let eTdEvenement = document.createElement("td");
                 let ePEvenement = document.createElement("p");
-                if (i < Object.keys(serveurDate[evt]).length) {
-                    eTrEvenement.appendChild(eTdEvenement).innerHTML = Object.values(serveurDate[evt])[i];
+                if (i < Object.keys(dateDuServeur).length) {
+                    eTrEvenement.appendChild(eTdEvenement).innerHTML = Object.values(dateDuServeur)[i];
                 }
                 // ajout l'icone de la poubelle supprimer
-                if (i == Object.keys(serveurDate[evt]).length + 1) {
-                    let compte = evt - 2;
+                if (i == Object.keys(dateDuServeur).length + 1) {
                     let eIcone = document.createElement("i");
                     eTrEvenement.appendChild(ePEvenement).appendChild(eIcone);
                     eTrEvenement.appendChild(ePEvenement).setAttribute("class", "fas fa-trash");
                     ePEvenement.addEventListener("click", function () {
-                        console.log(Object.values(serveurDate[evt])[0]);
-                        let id = Object.values(serveurDate[evt])[0];
+                        console.log(Object.values(dateDuServeur)[0]);
+                        let id = Object.values(dateDuServeur)[0];
                         suprimerEvenement(id);
                     })
 
                 }
+                
                 // ajout l'icone papier crayon modifier
-                if (i == Object.keys(serveurDate[evt]).length) {
-                    let compte = evt - 1;
+                if (i == Object.keys(dateDuServeur).length) {
+                    // ajouter le bouton au html
                     let eIcone = document.createElement("i");
                     eTrEvenement.appendChild(ePEvenement).appendChild(eIcone);
                     eTrEvenement.appendChild(ePEvenement).setAttribute("class", "far fa-edit");
-                    ePEvenement.addEventListener("click", function () {
-                        console.log(Object.values(serveurDate[evt])[0]);
-                        let id = Object.values(serveurDate[evt])[0];
-                        RecupererId(id)
 
-                        document.getElementById("formModifierEvenement").style.visibility = "visible";
-                        //modifierEvenement(id)
+                    // bind le click au bouton edit
+                    ePEvenement.addEventListener("click", function () {
+                        console.log(Object.values(serveurDate[index])[0]);
+                        let id = Object.values(serveurDate[index])[0];
+                        RecupererId(id)
+                        
+                        document.getElementById("myModal").style.visibility = "visible";
+
+                        // Ouvrir un modal pour modifier l'evement
                     })
                 }
             }
-            console.log(Object.values(serveurDate[evt])[0]);
+            console.log(Object.values(serveurDate[index])[0]);
         }
     });
 
