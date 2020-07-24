@@ -25,37 +25,6 @@ export function ajoutEvenement(){
         });
     });
   
-    //dropdown avec select pour les heur
-  
-    let heureDebut = document.getElementById("heureDebut");
-    let heureFin = document.getElementById("heureFin");
-  
-  for(let i =0; i<=23; i++){
-      let optionHeureDebut = document.createElement("option");
-      let optionHeureFin = document.createElement("option"); 
-  
-      heureDebut.appendChild(optionHeureDebut).innerHTML = i+"H";
-      optionHeureDebut.setAttribute("value",i);
-      heureFin.appendChild(optionHeureFin).innerHTML = i+"H";
-      optionHeureFin.setAttribute("value",i);
-    }
-    //dropdown avec select pour les minutes
-    let minuteDebut = document.getElementById("minuteDebut");
-    let minuteFin = document.getElementById("minuteFin");
-    for(let i =0; i<=59; i++){
-  
-      let optionMinuteDebut = document.createElement("option");
-      let optionMinuteFin = document.createElement("option");
-      //minute debut
-      minuteDebut.appendChild(optionMinuteDebut).innerHTML = i+"Min";
-      optionMinuteDebut.setAttribute("value",i);
-      //minute fin
-      minuteFin.appendChild(optionMinuteFin).innerHTML = i+"Min";
-      optionMinuteFin.setAttribute("value",i);
-    }
-
-
-  
   function ajoutDonnee(date,titre,description,stardt,enddt){
     let ajax = new XMLHttpRequest();
     let method = "POST";
@@ -85,5 +54,33 @@ export function ajoutEvenement(){
         }
     }
   
+  }
+}
+
+export function genererDropdownHeures() {
+  //dropdown avec select pour les heur
+  let heureDebut = document.getElementById("heureDebut");
+  let heureFin = document.getElementById("heureFin");
+
+  for(let i =0; i<=23; i++){
+    let optionHeureDebut = document.createElement("option");
+    let optionHeureFin = document.createElement("option"); 
+    heureDebut.appendChild(optionHeureDebut).innerHTML = i+"H";
+    heureDebut.setAttribute("value",i);
+    heureFin.appendChild(optionHeureFin).innerHTML = i+"H";
+    heureFin.setAttribute("value",i);
+  }
+
+  //dropdown avec select pour les minutes
+  let minuteDebut = document.getElementById("minuteDebut");
+  let minuteFin = document.getElementById("minuteFin");
+
+  for(let i =0; i<=59; i++){
+    let optionMinuteDebut = document.createElement("option");
+    let optionMinuteFin = document.createElement("option");
+    minuteDebut.appendChild(optionMinuteDebut).innerHTML = i+"Min";
+    optionMinuteDebut.setAttribute("value",i);
+    minuteFin.appendChild(optionMinuteFin).innerHTML = i+"Min";
+    optionMinuteFin.setAttribute("value",i);
   }
 }

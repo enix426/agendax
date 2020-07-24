@@ -2,8 +2,9 @@ import { jour, moisEnChiffre, annee } from "../controlleur/utiliter";
 import { appelAfficheEvenement } from "../controlleur/afficheEvenement";
 import { afficheGrille } from "../controlleur/afficheGrille";
 import { afficheGrilleSemaine } from "../controlleur/afficheGrilleSemaine"
-import { ajoutEvenement } from "../controlleur/ajoutEvenement";
+import { ajoutEvenement, genererDropdownHeures  } from "../controlleur/ajoutEvenement";
 import { afficheDansCase } from "../controlleur/afficheDansCase";
+import { soumettreFormulaire } from "../controlleur/modifierEvenement"
 
 console.log("je suis dans le main");
 
@@ -37,9 +38,12 @@ appelAfficheEvenement(function (donneesQuiAEteDonnerAAppelSucces) {
 });
 
 ajoutEvenement();
+genererDropdownHeures();
 
 let btnMois = document.getElementById('afficher-mois');
 let btnSemaine = document.getElementById('afficher-semaine');
+
+document.getElementById('btnModifierEvenement').onclick = () => soumettreFormulaire(serveurDate)
 
 btnMois.addEventListener('click', () => {
     localStorage.setItem("btnMois",1);
@@ -50,9 +54,6 @@ btnMois.addEventListener('click', () => {
     document.getElementById('affichageDate').innerHTML = ""
     document.getElementById("modificationEvent").innerHTML = "";
     afficheGrille(tabDate, serveurDate, jour(),+localStorage.getItem('compteurMois'),annee());
-
-   
-    
 })
 
 btnSemaine.addEventListener('click', () => {

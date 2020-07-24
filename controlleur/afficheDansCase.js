@@ -1,3 +1,5 @@
+import { remplirFormulaire, soumettreFormulaire } from "./modifierEvenement";
+
 export function afficheDansCase(serveurDate, idCalendrier) {
     
     console.log({serveurDate, idCalendrier});
@@ -70,12 +72,13 @@ export function afficheDansCase(serveurDate, idCalendrier) {
                         
                         document.getElementById("myModal").style.visibility = "visible";
 
-                        // Ouvrir un modal pour modifier l'evement
                         modal.style.display = "block";
+                        remplirFormulaire(dateDuServeur)
+
+                        // Backend: modifier l'evenement
                     })
                 }
             }
-            console.log(Object.values(serveurDate[index])[0]);
         }
     });
 

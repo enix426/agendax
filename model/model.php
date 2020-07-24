@@ -38,13 +38,13 @@ function ajoutEvenement($date, $titre,$description, $stardt, $enddt)
 }
 
 
-/* Modifier evenement  id pas sur si doit etre la a verifier (id)*/
 function modifierEvenement($id, $date, $titre,$description, $stardt, $enddt)
 {
     global $connexion;
 
-    $requete = "UPDATE evenement SET  `date` = $date,`titre` = $titre, `description` = $description,`stardt` = $stardt,`enddt` = $enddt
-    WHERE id=$id";
+    $requete = "UPDATE evenement 
+                SET  `date` = '$date',`titre` = '$titre', `description` = '$description',`stardt` = '$stardt',`enddt` = '$enddt'
+                WHERE id=$id";
     return mysqli_query($connexion, $requete);
 }
 
